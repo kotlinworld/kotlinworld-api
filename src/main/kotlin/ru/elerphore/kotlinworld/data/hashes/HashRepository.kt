@@ -1,4 +1,7 @@
 package ru.elerphore.kotlinworld.data.hashes
 
-interface HashRepository {
-}
+import org.springframework.data.r2dbc.repository.R2dbcRepository
+import org.springframework.stereotype.Repository
+
+@Repository
+interface HashRepository : R2dbcRepository<HashEntity, Long>

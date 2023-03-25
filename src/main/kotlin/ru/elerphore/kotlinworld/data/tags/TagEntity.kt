@@ -6,13 +6,13 @@ import org.springframework.data.relational.core.mapping.Table
 import ru.elerphore.kotlinworld.dto.TagItem
 
 @Table("tags")
-data class Tag(
+data class TagEntity(
 
     @Id
-    val id: Int,
+    var id: Int,
 
     @Column
-    val name: String,
+    var name: String,
 
 ) {
     constructor(tagItem: TagItem) : this(
